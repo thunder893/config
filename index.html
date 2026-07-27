@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Onyx Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --onyx-950: #0c0d10;
+    --onyx-900: #121316;
+    --onyx-800: #1a1c21;
+    --onyx-700: #23262d;
+    --onyx-600: #34373f;
+    --onyx-line: #2a2d34;
+    --gold: #c9a961;
+    --gold-soft: #e3cd93;
+    --text-hi: #f2efe8;
+    --text-mid: #b9b8c0;
+    --text-low: #7d7d88;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--onyx-950);
+    color: var(--text-mid);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    position: relative;
+    padding: 90px 24px 70px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201,169,97,0.10), transparent 65%),
+      linear-gradient(180deg, var(--onyx-900) 0%, var(--onyx-950) 100%);
+    border-bottom: 1px solid var(--onyx-line);
+    overflow: hidden;
+  }
+  .facet { width: 46px; height: 46px; margin: 0 auto 28px; position: relative; }
+  .facet svg { width: 100%; height: 100%; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(34px, 5vw, 52px);
+    color: var(--text-hi);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero p.sub { max-width: 520px; margin: 0 auto; color: var(--text-low); font-size: 15.5px; }
+  .hero .meta {
+    margin-top: 30px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-low);
+    border: 1px solid var(--onyx-line);
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+  }
+  .meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  nav.toc { position: sticky; top: 40px; align-self: start; }
+  nav.toc .toc-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--text-low);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--onyx-line); }
+  nav.toc li { margin: 0; }
+  nav.toc a {
+    display: block;
+    padding: 8px 0 8px 18px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    color: var(--text-low);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  nav.toc a:hover { color: var(--text-hi); }
+  nav.toc a.active { color: var(--gold-soft); border-left-color: var(--gold); }
+
+  main { min-width: 0; }
+  main > p.intro {
+    color: var(--text-mid);
+    font-size: 17px;
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--onyx-line);
+  }
+
+  section { scroll-margin-top: 40px; margin-bottom: 46px; }
+  section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 23px;
+    color: var(--text-hi);
+    margin: 0 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  section h2 .num { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; }
+  section .rule { width: 36px; height: 2px; background: var(--gold); opacity: 0.55; margin: 14px 0 18px; }
+  section p { margin: 0 0 14px; color: var(--text-mid); }
+  section ul { margin: 0 0 14px; padding-left: 20px; color: var(--text-mid); }
+  section li { margin-bottom: 8px; }
+  section li::marker { color: var(--gold); }
+  section strong { color: var(--text-hi); font-weight: 600; }
+  section a { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(201,169,97,0.35); }
+  section a:hover { border-bottom-color: var(--gold-soft); }
+
+  .card {
+    background: var(--onyx-900);
+    border: 1px solid var(--onyx-line);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 12px;
+  }
+  .card .service-name { color: var(--text-hi); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+  .card p { margin: 0; font-size: 14.5px; }
+
+  .callout {
+    background: linear-gradient(135deg, rgba(201,169,97,0.08), rgba(201,169,97,0.02));
+    border: 1px solid rgba(201,169,97,0.25);
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 14.5px;
+    color: var(--text-mid);
+  }
+  .callout strong { color: var(--gold-soft); }
+
+  .contact-box {
+    background: var(--onyx-900);
+    border: 1px solid var(--onyx-line);
+    border-radius: 12px;
+    padding: 28px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .contact-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-low); margin-bottom: 6px; }
+  .contact-box .email { font-family: 'Fraunces', serif; font-size: 19px; color: var(--text-hi); }
+
+  footer {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 24px 50px;
+    border-top: 1px solid var(--onyx-line);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-low);
+  }
+
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: 1fr; gap: 30px; padding-top: 44px; }
+    nav.toc { position: static; border-bottom: 1px solid var(--onyx-line); padding-bottom: 20px; }
+    nav.toc ol { display: flex; flex-wrap: wrap; gap: 4px 16px; border-left: none; }
+    nav.toc a { padding: 4px 0; border-left: none !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="facet">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 90,32 76,90 24,90 10,32" fill="none" stroke="#c9a961" stroke-width="1.4"/>
+      <polygon points="50,4 90,32 50,50" fill="#c9a961" fill-opacity="0.18"/>
+      <polygon points="50,4 10,32 50,50" fill="#c9a961" fill-opacity="0.08"/>
+      <polygon points="10,32 24,90 50,50" fill="#c9a961" fill-opacity="0.05"/>
+      <polygon points="90,32 76,90 50,50" fill="#c9a961" fill-opacity="0.12"/>
+      <line x1="50" y1="4" x2="50" y2="50" stroke="#c9a961" stroke-width="0.6" opacity="0.6"/>
+      <line x1="10" y1="32" x2="50" y2="50" stroke="#c9a961" stroke-width="0.6" opacity="0.6"/>
+      <line x1="90" y1="32" x2="50" y2="50" stroke="#c9a961" stroke-width="0.6" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="eyebrow">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="sub">How Onyx Player collects, uses, and protects information when you use the app.</p>
+  <div class="meta"><span class="dot"></span>Last updated: <strong style="color:#dcd9d0;margin-left:4px;">[DD Month YYYY]</strong></div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol id="toc-list">
+      <li><a href="#collect">1. Information We Collect</a></li>
+      <li><a href="#use">2. How We Use It</a></li>
+      <li><a href="#third-party">3. Third-Party Services</a></li>
+      <li><a href="#content">4. Streaming Content</a></li>
+      <li><a href="#sharing">5. Data Sharing</a></li>
+      <li><a href="#security">6. Data Security</a></li>
+      <li><a href="#children">7. Children's Privacy</a></li>
+      <li><a href="#choices">8. Your Choices</a></li>
+      <li><a href="#changes">9. Changes</a></li>
+      <li><a href="#contact">10. Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <p class="intro">
+      Onyx Player ("we", "our", "the app") is an Android application for streaming and media
+      playback. This policy explains what information the app collects, how it's used, and the
+      choices available to you. By using Onyx Player, you agree to the practices described below.
+    </p>
+
+    <section id="collect">
+      <h2><span class="num">01</span>Information We Collect</h2>
+      <div class="rule"></div>
+      <p>Onyx Player doesn't require an account to use. However, the following information may be collected automatically through the app and its third-party services:</p>
+      <ul>
+        <li><strong>Device information</strong> — device model, OS version, unique identifiers (such as the Android Advertising ID), language, and region.</li>
+        <li><strong>Usage data</strong> — screens viewed, content interactions, crashes, session length, and general in-app behavior.</li>
+        <li><strong>Advertising data</strong> — identifiers and approximate location (from IP address) used by Google AdMob to serve and measure ads.</li>
+        <li><strong>Log data</strong> — IP address, access times, and error logs generated automatically while using the app.</li>
+      </ul>
+      <div class="callout">We do not knowingly collect sensitive information such as financial details, precise GPS location, or government identifiers.</div>
+    </section>
+
+    <section id="use">
+      <h2><span class="num">02</span>How We Use It</h2>
+      <div class="rule"></div>
+      <ul>
+        <li>To operate, maintain, and improve the app's features and performance.</li>
+        <li>To display and personalize advertisements through Google AdMob.</li>
+        <li>To analyze usage trends and diagnose technical issues.</li>
+        <li>To detect, prevent, and address fraud, abuse, or security issues.</li>
+      </ul>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">03</span>Third-Party Services</h2>
+      <div class="rule"></div>
+      <p>Onyx Player relies on the following third-party services, which may collect information used to identify you:</p>
+      <div class="card">
+        <div class="service-name">Google AdMob</div>
+        <p>Used to display ads within the app. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+      </div>
+      <div class="card">
+        <div class="service-name">Google Analytics / Firebase</div>
+        <p>Used to understand app usage and improve stability. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+      </div>
+      <p style="margin-top:16px;">You can opt out of personalized advertising through your device's Ad Settings (<em>Settings → Google → Ads → Opt out of Ads Personalization</em>).</p>
+    </section>
+
+    <section id="content">
+      <h2><span class="num">04</span>Streaming Content &amp; Sources</h2>
+      <div class="rule"></div>
+      <p>
+        Onyx Player does not host media content itself. Any content streamed through the app is
+        sourced from third-party providers or links supplied by the user, and we are not
+        responsible for the privacy practices or content of those third-party sources.
+      </p>
+    </section>
+
+    <section id="sharing">
+      <h2><span class="num">05</span>Data Sharing &amp; Disclosure</h2>
+      <div class="rule"></div>
+      <p>We do not sell your personal information. We may share limited data with:</p>
+      <ul>
+        <li>Service providers (such as Google AdMob and Analytics), strictly to operate the app's advertising and analytics functions.</li>
+        <li>Law enforcement or regulators, if required to comply with a legal obligation.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">06</span>Data Security</h2>
+      <div class="rule"></div>
+      <p>We take reasonable technical measures to protect information processed by the app. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">07</span>Children's Privacy</h2>
+      <div class="rule"></div>
+      <p>Onyx Player is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us so we can remove it.</p>
+    </section>
+
+    <section id="choices">
+      <h2><span class="num">08</span>Your Choices</h2>
+      <div class="rule"></div>
+      <ul>
+        <li>Disable personalized ads via your device's Google Ad Settings.</li>
+        <li>Uninstall the app at any time to stop all data collection by it.</li>
+        <li>Contact us below to request more information about data associated with your device.</li>
+      </ul>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">09</span>Changes to This Policy</h2>
+      <div class="rule"></div>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">10</span>Contact Us</h2>
+      <div class="rule"></div>
+      <div class="contact-box">
+        <div>
+          <div class="label">Questions about this policy</div>
+          <div class="email">[your-email@example.com]</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  &copy; <span id="year"></span> Onyx Player. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const links = Array.from(document.querySelectorAll('nav.toc a'));
+  const sections = links.map(l => document.querySelector(l.getAttribute('href')));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = '#' + entry.target.id;
+      const link = links.find(l => l.getAttribute('href') === id);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => s && observer.observe(s));
+</script>
+
+</body>
+</html>
