@@ -1,6 +1,5 @@
 {
-"api_base_url": "https://your-current-domain.com",
-"min_supported_version_code": 70,
+"update_url": "https://your-current-domain.com",
 "latest_version_code": 71,
 "update_message": "A new version is available with important fixes. Please update to continue."
 }
